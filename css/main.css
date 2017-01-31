@@ -1,0 +1,110 @@
+body{
+background-image: url("../img/background.jpg") ;
+background-size: auto 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+overflow: hidden;
+background-position: center;
+}
+
+.cuerda{
+	position: absolute;
+	width: 100%;
+	background-image: url("../img/rope.png") ;
+	margin-top: 0%;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;
+}
+
+.globo{
+	position: absolute;
+	top: 0;
+	left: 300px;
+	width: 200px;
+	background-image: url("../img/board-cloud-4.png") ;
+	background-size: 200px auto;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 400px;
+	
+	animation: pendulo infinite;
+	animation-duration: 5s;
+	animation-timing-function: ease;
+	animation-direction: normal;
+	
+	transform: rotate(-20deg);
+	z-index: 1;
+}
+.faro{
+	position: absolute;
+	bottom: 0%;
+	margin-left: 70%;
+	height: 500px;
+	width: 200px;
+	background-image: url("../img/lighthouse.png") ;
+	background-size: 200px auto;
+	background-repeat: no-repeat;
+
+
+	animation: faro infinite;
+	animation-duration: 10s;
+	animation-timing-function: ease;
+	animation-direction: normal;
+	
+	transform: rotate(-20deg);
+	z-index:2;
+}
+.pie{
+	position:absolute;
+	bottom: 0;
+	margin-left: -40px;
+	margin-bottom: -20px;
+	z-index: 4;
+	height: 300px;
+	animation: olas infinite;
+	animation-duration: 2s;
+	width: 110%;
+	background-image: url("../img/wave-paint.png") ;
+	background-position: center;
+	animation-timing-function: linear;
+}
+.pie1{
+	position:absolute;
+	bottom: 0;
+	margin-left: -40px;
+	margin-bottom: -20px;
+	z-index: 4;
+	height: 300px;
+	animation: olas infinite;
+	animation-duration: 2s;
+	width: 110%;
+	background-image: url("../img/wave-plain.png") ;
+	background-position: center;
+	animation-timing-function: linear;
+}
+
+
+@keyframes pendulo{
+	0% 100%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(20deg) ; 
+	}
+}
+@keyframes faro{
+	0% 100%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(10deg) ; 
+	}
+}
+@keyframes olas{
+	
+	 from { transform: rotate(0deg)  translate(-10px) rotate(0deg); }
+    to { transform: rotate(360deg) translate(-10px) rotate(-360deg); }
+}
+}
